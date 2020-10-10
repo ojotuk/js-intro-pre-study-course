@@ -26,7 +26,9 @@ addBtn.addEventListener("click", () => {
   const contentVal = content.value;
   //get date
   const date = new Date().toLocaleDateString();
-
+  //Ensure fields are not empty
+if(!titleVal) return alert('Please title is required');
+  if(!contentVal) return alert('Note content cannot be empty');
   //collect previous content
   const prevJournal = articleContainer.innerHTML;
   //set container to prev content and newly added
